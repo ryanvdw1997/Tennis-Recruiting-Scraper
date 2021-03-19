@@ -7,7 +7,6 @@ players = pd.read_csv(r"C:\\Users\\rvand\Downloads\\toy_dataset_scrape_trainer.c
 def scraper(players):
     player_to_location_map = {}
     for i in players:
-        j+=1
         final_url = google_search+f"{i}"+" tennisrecruiting"
         search_results = requests.get(final_url)
         soup = bs4.BeautifulSoup(search_results.text, 
